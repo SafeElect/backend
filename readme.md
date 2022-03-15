@@ -84,4 +84,5 @@ Add(insert) new candidate
 get all candidates
 
 /candidate/:id
+---------
 increase the vote count by one by using nid of the candidate
