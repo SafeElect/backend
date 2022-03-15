@@ -6,6 +6,10 @@ VOTER ->
 ---------
 Add(insert) new VOTER
 
+/dbvoter
+---------
+transfer the 3rd party database (post => "url" : "https://example.com")
+
 /voter
 ---------
 Get all voters
@@ -66,3 +70,18 @@ get stats by age and candidate
 /stats/bcv/:bcity/:votedfor
 ---------
 get stats by bcity and candidate
+
+
+
+candidate =>
+
+/addcandidate
+---------
+Add(insert) new candidate
+
+/candidate
+---------
+get all candidates
+
+/candidate/:id
+increase the vote count by one by using nid of the candidate
