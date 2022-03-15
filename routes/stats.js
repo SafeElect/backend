@@ -27,7 +27,6 @@ router.get('/stats', (_, res) => {
             return;
         }
         let returningValues = [...results];
-        returningValues = returningValues.map(({ password, ...val }) => val);
         sendResponse(res, 200, returningValues);
     });
 });
