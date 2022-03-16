@@ -2,7 +2,7 @@ USER MANUAL
 
 VOTER -> 
 
-/addvoter
+/addvoter (post)
 ---------
 Add(insert) new VOTER
 
@@ -27,7 +27,7 @@ get voter by id
 
 STATS ->
 
-/addstat
+/addstat (post)
 ---------
 add a new stat
 
@@ -75,7 +75,7 @@ get stats by bcity and candidate
 
 candidate =>
 
-/addcandidate
+/addcandidate (post)
 ---------
 Add(insert) new candidate
 
@@ -83,6 +83,6 @@ Add(insert) new candidate
 ---------
 get all candidates
 
-/candidate/:id
+/candidate/:id (put)
 ---------
 increase the vote count by one by using nid of the candidate
