@@ -45,7 +45,7 @@ router.put("/candidate/:id", (req, res) => {
                     sendError(res, 400, msg);
                     return;
                 }
-                sendResponse(res, 200, body);
+                sendResponse(res, 200, "Vote casted!");
             }
     );
 });
