@@ -8,7 +8,7 @@ Add(insert) new VOTER
 
 /dbvoter
 ---------
-transfer the 3rd party database (post => "url" : "https://example.com")
+transfer a 3rd party database (post => "url" : "https://example.com")
 
 /voter
 ---------
