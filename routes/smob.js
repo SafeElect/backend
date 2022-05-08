@@ -44,7 +44,6 @@ router.get('/smob/:votedfor', (req, res) => {
         uniqueCities.forEach(el => {
             cities[el]=(returningValues.filter(value => value.bcity == el).length/returningValues.length*100);
         });
-        console.log(cities);
         sendResponse(res, 200, {data: returningValues,genderPercentages: precentages, avgAge: avgAge, cityPercentages: cities});
       }
     });
