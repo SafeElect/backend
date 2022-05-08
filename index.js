@@ -5,7 +5,11 @@ const morgan = require("morgan");
 const voterRoute = require("./routes/voter");
 const statsRoute = require("./routes/stats");
 const voteRoute = require("./routes/vote");
+<<<<<<< HEAD
 const smobRoute = require("./routes/smob");
+=======
+const isVotingRoute = require("./routes/isvoting");
+>>>>>>> origin/BranchAbdullah
 
 const PORT = process.env.PORT || "8080";
 
@@ -18,7 +22,12 @@ app.use(morgan("dev"));
 app.use(voterRoute);
 app.use(statsRoute);
 app.use(voteRoute);
+<<<<<<< HEAD
 app.use(smobRoute);
+=======
+app.use(isVotingRoute);
+
+>>>>>>> origin/BranchAbdullah
 
 app.listen(PORT, () => {
     console.log(`server started on port ${PORT}`);
