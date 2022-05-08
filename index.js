@@ -6,7 +6,6 @@ const voterRoute = require("./routes/voter");
 const statsRoute = require("./routes/stats");
 const voteRoute = require("./routes/vote");
 
-
 const PORT = process.env.PORT || "8080";
 
 const app = express();

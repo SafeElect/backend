@@ -76,7 +76,7 @@ router.get('/voter/:id', (req, res) => {
     }
     if (results.length > 0) {
       const returningValues = [...results][0];
-      delete returningValues.pass;
+      // delete returningValues.pass;
       sendResponse(res, 200, returningValues);
     } else {
       sendError(res, 400, 'voter with provided id does not exist!');
