@@ -1,8 +1,8 @@
-const DB_HOST = "sql11.freemysqlhosting.net";
-const DB_USER = "sql11490613";
-const DB_PASSWORD = "1Px8eX9w6i";
+const DB_HOST = "localhost";
+const DB_USER = "root";
+const DB_PASSWORD = "";
 const DB_PORT = "3306";
-const DB_DATABASE = "sql11490613";
+const DB_DATABASE = "safeelect";
 
 const DOMAIN = "http://localhost:3000";
 
