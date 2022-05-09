@@ -89,7 +89,7 @@ router.put("/voter/v/:id", (req, res) => {
   const id = req.params.id;
   const body = req.body;
   const query =
-      "UPDATE voter SET voted = 1 WHERE nid = ?";
+      "UPDATE voter SET voted = 1 WHERE id = ?";
   connection.query(
       query,
       [id],
