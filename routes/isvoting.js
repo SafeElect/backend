@@ -20,8 +20,10 @@ router.get('/isvoting', (req, res) => {
 //       sendError(res, 400, 'voter with provided id does not exist!');
 //     }
 //   });
-    const votingState = 2; // 0 = not voting, 1 = voting
-    sendResponse(res, 200, votingState);
+    const votingState = 1; // 0 = not voting, 1 = voting
+    sendResponse(res, 200, votingState); // implement logic here, this doesnt work because I get 304 which leads to undefined
+// NOT WORKING... SET IT UP WITH DB  AND WEB ADMIN PANEL
+
 });
 
 module.exports = router;
