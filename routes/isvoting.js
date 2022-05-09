@@ -11,7 +11,12 @@ router.get('/isvoting', (_, res) => {
 router.get('/isvoting/end', (_, res) => {
     votingState = 0;
     sendResponse(res, 200, "voting ended");
-    console.log(votingState);
+
+});
+router.get('/isvoting/start', (_, res) => {
+    votingState = 1;
+    sendResponse(res, 200, "voting started");
+
 });
 
 module.exports = router;
