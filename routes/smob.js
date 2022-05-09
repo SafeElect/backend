@@ -87,6 +87,9 @@ router.get('/smob/:votedfor', (req, res) => {
 
         sendResponse(res, 200, {data: returningValues,genderPercentages: malep, age: [et,tf,fs,sp], location: cityKey, locationPercentage: cityVal});
       }
+      else {
+        sendError(res, 400, 'no stats');
+      }
     });
   });
 
