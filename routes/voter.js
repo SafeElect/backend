@@ -84,4 +84,24 @@ router.get('/voter/:id', (req, res) => {
   });
 });
 
+router.put("/voter/v/:id", (req, res) => {
+  const connection = pool;
+  const id = req.params.id;
+  const body = req.body;
+  const query =
+      "UPDATE voter SET voted = 1 WHERE nid = ?";
+  connection.query(
+      query,
+      [id],
+          (err, results) => {
+              if (err || results.affectedRows == 0) {
+                  const msg = err ? err.sqlMessage : "id does not exist";
+                  sendError(res, 400, msg);
+                  return;
+              }
+              sendResponse(res, 200, "Vote casted!");
+          }
+  );
+});
+
 module.exports = router;
