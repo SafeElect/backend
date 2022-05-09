@@ -5,7 +5,7 @@ const { sendError, sendResponse, pool } = require('../helper');
 const router = express.Router();
 let votingState = 1;
 router.get('/isvoting', (_, res) => {
-    sendResponse(res, 200, votingState);
+    sendResponse(res, 200, ""+votingState);
     
 });
 router.get('/isvoting/end', (_, res) => {
