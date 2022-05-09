@@ -20,7 +20,7 @@ router.get('/isvoting', (req, res) => {
 //       sendError(res, 400, 'voter with provided id does not exist!');
 //     }
 //   });
-    const votingState = true;
+    const votingState = 2; // 0 = not voting, 1 = voting
     sendResponse(res, 200, votingState);
 });
 
