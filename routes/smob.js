@@ -2,17 +2,30 @@ const express = require('express');
 const { sendError, sendResponse, pool } = require('../helper');
 
 const router = express.Router();
+async function fetchTeams() {
+  let team = [];
+  for(let i = 0;i<13;i++)
+  {
+    let x = i+1;
+    let response = await fetch('http://localhost:8080/smob/Team '+x);
+    team[i] = await response.json();
+  }
+  
+  // waits until the request completes...
+  return(team);
+}
 
-router.get('/smob', (_, res) => {
+router.get('/smob', async (_, res) => {
     const connection = pool;
     query = 'SELECT *, voteCount * 100 / (SELECT SUM(voteCount) as vc FROM candidate) as `percentage` FROM candidate ORDER BY votecount desc';
+    let x = await fetchTeams();
     connection.query(query, (err, results) => {
         if (err) {
             sendError(res, 400, err.sqlMessage);
             return;
         }
         let returningValues = [...results];
-        sendResponse(res, 200, returningValues);
+        sendResponse(res, 200, {returningValues,x});
     });
 });
 
@@ -85,7 +98,7 @@ router.get('/smob/:votedfor', (req, res) => {
           }
         }
 
-        sendResponse(res, 200, {data: returningValues,genderPercentages: malep, age: [et,tf,fs,sp], location: cityKey, locationPercentage: cityVal});
+        sendResponse(res, 200, {genderPercentages: malep, age: [et,tf,fs,sp], location: cityKey, locationPercentage: cityVal});
       }
       else {
         sendError(res, 400, 'no stats');
