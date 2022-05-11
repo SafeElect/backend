@@ -543,11 +543,6 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
-"fsevents@~2.3.2":
-  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
-  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
-  "version" "2.3.2"
-
 "gauge@^3.0.0":
   "integrity" "sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q=="
   "resolved" "https://registry.npmjs.org/gauge/-/gauge-3.0.2.tgz"
@@ -963,10 +958,10 @@
   dependencies:
     "whatwg-url" "^5.0.0"
 
-"node-fetch@^3.2.3":
-  "integrity" "sha512-AXP18u4pidSZ1xYXRDPY/8jdv3RAozIt/WLNR/MBGZAz+xjtlr90RvCnsvHQRiXyWliZF/CpytExp32UU67/SA=="
-  "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-3.2.3.tgz"
-  "version" "3.2.3"
+"node-fetch@^3.2.4":
+  "integrity" "sha512-WvYJRN7mMyOLurFR2YpysQGuwYrJN+qrrpHjJDuKMcSPdfFccRUla/kng2mz6HWSBxJcqPbvatS6Gb4RhOzCJw=="
+  "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-3.2.4.tgz"
+  "version" "3.2.4"
   dependencies:
     "data-uri-to-buffer" "^4.0.0"
     "fetch-blob" "^3.1.4"
